@@ -113,6 +113,7 @@ nav.scrolled { padding: 0.6rem 2.5rem; }
   letter-spacing: 0.05em;
   text-decoration: none;
   transition: color 0.2s;
+  opacity: 0;
 }
 .nav-logo span { color: var(--parchment); font-size: 0.7rem; display: block; letter-spacing: 0.3em; font-family: var(--font-body); text-transform: uppercase; }
 
@@ -909,6 +910,13 @@ nav.scrolled { padding: 0.6rem 2.5rem; }
   cursor: none;
   filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
 }
+.sheep-float-topleft {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 900;
+  width: 120px;
+}
 .sheep-float.visible { bottom: 2rem; opacity: 0.85; }
 .sheep-float:hover { animation: sheepWiggle 0.5s ease; }
 @keyframes sheepWiggle {
@@ -1206,6 +1214,10 @@ footer {
      src="sotc-logo-v1-distressed.png"
      alt="Sheep mascot"
      onclick="sheepClick(this)">
+	
+<img class="sheep-float-topleft" id="sheep-float-topleft"
+     src="sotc-logo-v1-distressed.png"
+     alt="Sheeps On The Cheaps">
 
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
@@ -1249,8 +1261,7 @@ footer {
 <!-- NAV -->
 <nav id="mainNav">
   <a class="nav-logo" href="#hero">
-    $HEEPS
-    <span>Premium Shitwear</span>
+    $HEEPS on the CHEAP$ <span>Premium Shitwear</span>
   </a>
   <ul class="nav-links">
     <li><a href="#shop">Shop</a></li>
