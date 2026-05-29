@@ -1594,13 +1594,14 @@ let sheepClicks = 0;
 function sheepClick(el) {
   sheepClicks++;
   const msgs = [
-    'Baaaaa.',
+    'Baaaaaraaaaaaap.',
     'Still just a sheep.',
     'What are you doing?',
-    'Okay stop.',
+    'Okay stop. You are making it weird.',
     'Fine. Here\'s 90% off: CHEAPS90',
-    '...seriously?',
+    '...seriously? This is improper.',
     'You win. We give up.',
+	'At this point, you have a sheep fetish.',
   ];
   showToast(msgs[Math.min(sheepClicks - 1, msgs.length - 1)]);
   el.style.animation = 'sheepWiggle 0.5s ease';
